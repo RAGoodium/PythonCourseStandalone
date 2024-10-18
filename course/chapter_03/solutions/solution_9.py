@@ -1,9 +1,8 @@
-n = int(input())
-d = 10
-numb = 0
-summ = 0
-while numb >= 0:
-    numb = n % d
-    d = d * 10
-    summ = summ + numb
-print(summ)
+n = int(input()) #1 3 101 6235
+s = 0
+
+while n > 0:
+    d = n % 10
+    s += d
+    n = n // 10
+print(s)
