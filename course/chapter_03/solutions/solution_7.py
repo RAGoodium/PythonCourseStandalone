@@ -1,8 +1,7 @@
 nu = int(input())
-timer = 0
-fac = 0
+timer = 1
+fac = 1
 while timer <= nu:
-    fac = nu * (nu - timer)
-
+    fac = fac * timer
     timer += 1
-print(fac) #not working
+print(fac) 
