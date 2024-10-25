@@ -5,13 +5,12 @@ while tries > 0 and s != password:
     
     s = input()
     
+    tries -= 1
+    
     if tries > 0:
         
         if s != password:
             print("Неверный пароль, попробуйте снова.")
-        elif
-
-    tries -= 1
 
 if s == password:
     print('Доступ разрешён.')
