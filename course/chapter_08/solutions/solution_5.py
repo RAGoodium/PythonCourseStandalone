@@ -3,10 +3,10 @@ matrix = [
     [4, 5, 6],
     [7, 8, 9]
 ]
-for n in matrix:
-    for i in n:
-        if i == 7 or i == 8 or i == 9:
-            print(i, end="")
+for x in range(3):
+    for y in range(3):
+        if matrix[y][x] in [7, 8, 9]:
+            print(matrix[y][x], end='')
         else:
-            print(i, end=" ")
+            print(matrix[y][x], end=' ')
     print()
