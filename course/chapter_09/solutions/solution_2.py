@@ -1,5 +1,5 @@
 s = input()
-s.lower()
+s = s.lower()
 amount = 0
 for n in s:
     if n in "аеёиоуэюя":
