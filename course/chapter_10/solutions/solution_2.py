@@ -1,0 +1,5 @@
+l1 = input().split()
+l2 = input().split()
+set1 = set(l1)
+set2 = set(l2)
+print(*sorted(set1 & set2))
