@@ -1,10 +1,13 @@
 inp = input().split()
-idk = []
+d = dict()
+l = list()
 for s in inp:
-    if s in idk:
-        a = str(inp.count(s))
-        sym = (s + "_" + a)
-        idk.append(sym)
+    if s in d:
+        d[s] += 1
+        n = (s + "_" + str(d[s]))
+        l.append(n)
     else:
-        idk.append(s)
-print(*idk)
+        d[s] = 0
+        l.append(s)
+
+print(" ".join(l))
