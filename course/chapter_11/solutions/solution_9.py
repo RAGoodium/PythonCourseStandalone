@@ -51,16 +51,13 @@ for t in s2:
 #print(trigramm)
 
 print('Слова:', end=" ")
-for w in word:
-    print(w, word[w], sep=": ", end=", ")
-    #print(*words)
-print()
+q = ", ".join([w + ": " + str(word[w])for w in word])
+print(q)
     
 print('Биграммы:', end=" ") #в фор переделать
-q = ", ".join([b + ": " +str(bigramm[b])for b in bigramm])
+q = ", ".join([b + ": " + str(bigramm[b])for b in bigramm])
 print(q)
 
 print('Триграммы:', end=" ")
-for t in trigramm:
-    print(t, trigramm[t], sep=": ", end=", ")
-print()
+q = ", ".join([t + ": " + str(trigramm[t])for t in trigramm])
+print(q)
