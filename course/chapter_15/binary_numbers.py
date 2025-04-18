@@ -7,19 +7,25 @@ def sum_bin_num(n, one):
         if (one & n):
             res += 1
         one = one << 1 
-    return res
+    return bin(n), res
 print(sum_bin_num(127, 1))
 
 def kruti_muti(n):
     #Число в двоичном, 2 функции (1 - крайний правый в начало, 2 - первый в конец)
-    n = bin(n)
-    strt = n[0:1:]
-    end = n[:-1:-1]
-    
-    
-print(kruti_muti(8)) #1000 | 0001 | 0100
+    one = 1
+    n1, n2 = n, n
+    while one < n1:
+        one <<= 1
+    if 1 & n1:
+        n1 += one 
+    n1 >>= 1 
 
-n = bin(8)
-strt = n[0:1:]
-end = n[:-1:-1]
-print()
+    while one < n2:
+        one <<= 1
+    n2 <<= 1
+    n2 ^= one 
+    n2 += 1 
+    return bin(n), bin(n1), bin(n2)
+print(kruti_muti(21)) #1000 | 0001 | 0100
+
+#def mask()
